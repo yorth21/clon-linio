@@ -67,7 +67,6 @@
 }
 
 .nav__form {
-    background-color: var(--white);
     height: 2.5rem;
     border-radius: .5rem;
 
@@ -76,8 +75,11 @@
     flex: 1;
 }
 .nav__input {
+    background-color: var(--white);
     width: 100%;
     padding: .5rem;
+
+    border-radius: .5rem 0 0 .5rem;
 
     font-size: .9em;
     color: var(--dark-400);
@@ -87,13 +89,21 @@
 }
 .nav__input::placeholder {
     color: var(--dark-400);
+    opacity: 1;
 }
 .nav__button {
+    background-color: var(--white);
     width: 3.125rem;
+
+    border-radius: 0 .5rem .5rem 0;
+    cursor: pointer;
 
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.nav__button:active {
+    background-color: var(--dark-400);
 }
 .nav__search {
     width: 1.75rem;
