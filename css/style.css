@@ -1,0 +1,161 @@
+/* Colores y tipo de fuente */
+:root {
+    /* Dark */
+    --dark-100: #333333;
+    --dark-200: #3d3d3d;
+    --dark-300: #5a5a5a;
+    --dark-400: #666666;
+    --dark-500: #bbbbbb;
+    /* Orange */
+    --orange: #ff5500;
+    /* White */
+    --white: #ffffff;
+}
+
+/* ---- navbar 1180px ---- */
+.header {
+    background-color: var(--dark-200);
+    width: 100%;
+
+    color: var(--white);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__nav {
+    width: 100%;
+    max-width: 73.75rem;
+    height: 3.5rem;
+    padding: .5rem 0;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav {}
+
+.nav__menu {
+    padding: 0.5rem 1rem;
+
+    cursor: pointer;
+}
+.nav__menu:hover {
+    color: var(--orange);
+}
+.nav__img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.nav__h1 {
+    margin: 0 1rem 0 0;
+}
+.nav__a {
+
+}
+.nav__logo {
+    height: 2.5rem;
+}
+.nav__logo--icon {
+    display: none;
+}
+
+.nav__form {
+    background-color: var(--white);
+    height: 2.5rem;
+    border-radius: .5rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 1;
+}
+.nav__input {
+    width: 100%;
+    padding: .5rem;
+
+    font-size: .9em;
+    color: var(--dark-400);
+}
+.nav__input:focus {
+    outline: none;
+}
+.nav__input::placeholder {
+    color: var(--dark-400);
+}
+.nav__button {
+    width: 3.125rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav__search {
+    width: 1.75rem;
+    height: 1.75rem;
+
+    color: var(--orange);
+}
+
+.nav__ul {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.nav__li {}
+.btn {
+    height: 2.5rem;
+    padding: 0 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn:nth-last-child(n+2) {
+    border-right: 1px solid var(--dark-300);
+}
+.btn__a {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.btn__a:hover {
+    color: var(--dark-500);
+}
+.btn__img {
+    width: 2rem;
+    height: 2rem;
+}
+.btn__span {
+    margin: 0 0 0 1rem;
+    white-space: nowrap;
+}
+
+@media (max-width: 1180px) {
+    .btn__span {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav__menu {
+        padding: 0.5rem .5rem;
+    }
+
+    .btn--secondary {
+        display: none;
+    }
+
+    .nav__h1 {
+        margin: 0 .5rem;
+    }
+
+    .nav__logo {
+        display: none;
+    }
+    .nav__logo--icon {
+        display: block;
+    }
+}
