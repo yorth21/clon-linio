@@ -1,12 +1,14 @@
 /* Colores y tipo de fuente */
 :root {
     /* Dark */
+    --dark-000: #212121;
     --dark-100: #333333;
     --dark-200: #3d3d3d;
     --dark-300: #5a5a5a;
     --dark-400: #666666;
     --dark-500: #bbbbbb;
     --dark-600: #dddddd;
+    --dark-700: #f7f7f7;
     /* Orange */
     --orange: #ff5500;
     /* White */
@@ -20,6 +22,8 @@
 
     position: fixed;
     top: 0;
+    z-index: 2;
+
     color: var(--white);
 
     display: flex;
@@ -40,12 +44,15 @@
 }
 .nav {}
 
-.nav__menu {
-    padding: 0.5rem 1rem;
+.nav__menu {}
+.nav__btn {
+    padding: 1rem 1rem;
+
+    position: relative;
 
     cursor: pointer;
 }
-.nav__menu:hover {
+.nav__btn:hover {
     color: var(--orange);
 }
 .nav__img {
@@ -146,6 +153,56 @@
     white-space: nowrap;
 }
 
+/* menu desplegable - desktop */
+.menu__desplegable {
+    max-width: 73.75rem;
+    width: 100%;
+
+    position: absolute;
+    top: 3.5rem;
+
+    display: flex;
+}
+.desplegable {}
+.desplegable__ul {
+    background-color: var(--white);
+    width: 25%;
+}
+.desplegable__li {
+    color: var(--dark-400);
+}
+.desplegable__li:hover {
+    background-color: var(--orange);
+    color: var(--white);
+}
+.desplegable__a {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    align-items: center;
+}
+.desplegable__img {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin: .25rem .5rem;
+}
+.desplegable__text {
+    font-size: .9em;
+    white-space: nowrap;
+}
+
+.desplegable__content {
+    background-color: var(--dark-700);
+    width: 75%;
+
+    color: var(--dark-100);
+}
+
+/* Clase usada para deshabilitar elementos */
+.disable {
+    display: none;
+}
+
 @media (max-width: 1180px) {
     .btn__span {
         display: none;
@@ -172,6 +229,21 @@
     .nav__logo--icon {
         display: block;
     }
+}
+
+/* Fondo oscuro */
+
+.fondo {
+    background-color: var(--dark-000);
+
+    bottom: 0;
+    height: 100%;
+    opacity: .3;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
 }
 
 /* ---- sub navbar ----- */
